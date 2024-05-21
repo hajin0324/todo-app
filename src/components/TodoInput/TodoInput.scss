@@ -1,0 +1,26 @@
+.todoInput {
+  display: flex;
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  background-color: rgb(240, 214, 44);
+  border: none;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s background-color ease-in;
+  &:hover {
+    background-color: rgb(152, 161, 192);
+  }
+}
