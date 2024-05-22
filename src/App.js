@@ -35,10 +35,14 @@ const App = () => {
     nextId.current += 1;
   }, [todos], );
   
+  const removeTodo = useCallback(id => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  }, [todos], );
+
   return (
     <TodoContainer>
       <TodoInput addTodo={addTodo}/>  
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} removeTodo={removeTodo} />
     </TodoContainer>
   );
 }
