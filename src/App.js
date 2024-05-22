@@ -39,10 +39,16 @@ const App = () => {
     setTodos(todos.filter(todo => todo.id !== id));
   }, [todos], );
 
+  const toggleTodo = useCallback(id => {
+    setTodos(todos.map(todo => 
+      todo.id === id ? { ...todo, checked: !todo.checked } : todo,
+    ));
+  }, [todos], );
+
   return (
     <TodoContainer>
       <TodoInput addTodo={addTodo}/>  
-      <TodoList todos={todos} removeTodo={removeTodo} />
+      <TodoList todos={todos} removeTodo={removeTodo} toggleTodo={toggleTodo} />
     </TodoContainer>
   );
 }
