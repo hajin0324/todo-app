@@ -2,11 +2,15 @@
   display: flex;
   input {
     flex: 1;
+    background-color: rgb(240, 214, 44);
     border: none;
+    border-right: solid rgb(152, 161, 192) 2px;
     outline: none;
     padding: 10px;
     font-size: 14px;
-    color: black;
+    &::placeholder {
+      color: white;
+    }
   }
 }
 

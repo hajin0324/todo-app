@@ -1,0 +1,39 @@
+.todoListItem {
+  display: flex;
+  padding: 18px;
+  align-items: center;
+  &:nth-child(even) {
+    background: rgb(245, 245, 250);
+  }
+}
+
+.todoWrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  cursor: pointer;
+  svg {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .todo {
+    flex: 1;
+  }
+  &.checked {
+    svg {
+      color: rgb(22, 54, 134);
+    }
+    .text {
+      color: #b3bcc4;
+    }
+  }
+}
+
+.removeBtn {
+  font-size: 20px;
+  color: rgb(226, 0, 0);
+  cursor: pointer;
+  &:hover {
+    color: rgb(22, 54, 134);
+  }
+}
