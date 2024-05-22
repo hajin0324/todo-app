@@ -7,7 +7,7 @@
   }
 }
 
-.todoWrapper {
+.check {
   display: flex;
   flex: 1;
   align-items: center;
@@ -23,9 +23,8 @@
     svg {
       color: rgb(22, 54, 134);
     }
-    .text {
-      color: #b3bcc4;
-    }
+    color: #b3bcc4;
+    text-decoration: line-through;
   }
 }
 
